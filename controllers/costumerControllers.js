@@ -50,7 +50,7 @@ exports.deleteAll = async (req,res)=>{
 
 exports.updateById = async (req,res)=>{
     try{
-        const updatedCostumers = await Costumer.findByIdAndUpdate(req.params,req.body,{
+        const updatedCostumers = await Costumer.findByIdAndUpdate(req.params.id,req.body,{
             new:true,
             runValidators:true
         });
